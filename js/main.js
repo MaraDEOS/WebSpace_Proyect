@@ -58,24 +58,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const inputNombre = document.getElementById('nombre');
     const inputTelefono = document.getElementById('telefono');
 
-    // --- RESTRICCIÓN EN TIEMPO REAL ---
+    
 
     // Nombre: Solo permite letras, espacios y acentos
     inputNombre.addEventListener('input', function() {
         this.value = this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ\s]/g, '');
     });
 
-    // Teléfono: Solo permite números, +, - y espacios
+    
     inputTelefono.addEventListener('input', function() {
         this.value = this.value.replace(/[^0-9+\-\s]/g, '');
     });
 
-    // --- VALIDACIÓN FINAL AL ENVIAR (Para seguridad extra) ---
+    
     if (formulario) {
         formulario.addEventListener('submit', function(evento) {
             evento.preventDefault();
             
-            // ... (aquí puedes dejar tu lógica de alerta de éxito)
+            
             const nombre = document.getElementById('nombre').value;
             alert(`¡Gracias por querer unirte, ${nombre}! Solicitud recibida.`);
             formulario.reset();
