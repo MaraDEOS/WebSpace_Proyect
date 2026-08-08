@@ -19,16 +19,21 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
-    padding: 1rem 2rem;
+    padding: 0.5rem 1.5rem; /* Padding reducido para ganar espacio vertical */
     display: flex;
-    flex-direction: column;
+    flex-direction: row; /* Alinea logo a la izquierda y menú a la derecha */
+    justify-content: space-between;
     align-items: center;
-    gap: 1rem;
     border-bottom: 4px solid #E65100;
 }
 
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
 .logo-img {
-    max-height: 95px;
+    max-height: 50px; /* Reducido de 95px a 50px */
     width: auto;
     object-fit: contain;
 }
@@ -36,21 +41,24 @@ body {
 /* Menú para las páginas */
 .navbar ul {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap: nowrap; /* Mantiene todos los botones en una sola fila */
+    align-items: center;
     list-style: none;
-    gap: 0.6rem;
+    gap: 0.4rem; /* Distancia ajustada para que quepan todos los enlaces */
+    margin: 0;
+    padding: 0;
 }
 
 .navbar a {
     text-decoration: none;
     color: #1A237E;
     font-weight: 700;
-    font-size: 0.95rem;
-    padding: 0.5rem 1rem;
+    font-size: 0.82rem; /* Tamaño de letra ligeramente ajustado */
+    padding: 0.4rem 0.7rem;
     border-radius: 20px;
     background-color: #f0f3ff;
     transition: all 0.3s ease;
+    white-space: nowrap; /* Evita que el texto de un botón se divida */
 }
 
 .navbar a:hover,
