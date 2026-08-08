@@ -55,49 +55,41 @@ document.addEventListener('DOMContentLoaded', () => {
 /*Parte del formulario de voluntariado */
 document.addEventListener('DOMContentLoaded', () => {
     
+    console.log("JavaScript cargado correctamente en voluntariado.html");
     
     const formulario = document.querySelector('.volunteer-form');
 
     
-    formulario.addEventListener('submit', function(evento) {
-        
-        
-        evento.preventDefault();
+    if (formulario) {
+        formulario.addEventListener('submit', function(evento) {
+            
+            // 1. Evitamos el envío
+            evento.preventDefault();
 
-        
-        const nombre = document.getElementById('nombre').value.trim();
-        const telefono = document.getElementById('telefono').value.trim();
-        const area = document.getElementById('area').value;
-        const mensaje = document.getElementById('mensaje').value.trim();
+            // 2. Obtenemos valores
+            const nombre = document.getElementById('nombre').value.trim();
+            const telefono = document.getElementById('telefono').value.trim();
+            const area = document.getElementById('area').value;
+            const mensaje = document.getElementById('mensaje').value.trim();
 
-      
+            
+            const regexNombre = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/;
+            if (!regexNombre.test(nombre)) {
+                alert("Error: Por favor, ingresa un nombre válido (solo letras).");
+                return; 
+            }
 
-        
-        const regexNombre = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/;
-        if (!regexNombre.test(nombre)) {
-            alert("Error: Por favor, ingresa un nombre válido (solo letras y espacios).");
-            return; 
-        }
+            const regexTelefono = /^[0-9+\-\s]+$/;
+            if (!regexTelefono.test(telefono)) {
+                alert("Error: Por favor, ingresa un número de teléfono válido (solo números).");
+                return; 
+            }
 
-        const regexTelefono = /^[0-9+\-\s]+$/;
-        if (!regexTelefono.test(telefono)) {
-            alert("Error: Por favor, ingresa un número de teléfono válido (solo números).");
-            return; 
-        }
-
-        
-
-       
-        console.log("--- Nueva Solicitud de Voluntariado ---");
-        console.log("Nombre:", nombre);
-        console.log("Teléfono:", telefono);
-        console.log("Área de interés:", area);
-        console.log("Mensaje:", mensaje);
-
-       
-        alert(`¡Gracias por querer unirte a RedMaSolHN, ${nombre}!\n\nHemos recibido tu solicitud para el área de "${area}". Nos pondremos en contacto contigo pronto al número ${telefono}.`);
-
-      
-        formulario.reset();
-    });
+            
+            alert(`¡Gracias por querer unirte a RedMaSolHN, ${nombre}!\nHemos recibido tu solicitud.`);
+            formulario.reset();
+        });
+    } else {
+        console.error("No se encontró el formulario. Revisa la clase en el HTML.");
+    }
 });
