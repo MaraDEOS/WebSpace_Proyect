@@ -259,6 +259,7 @@ CSS DE PAGINA ACERCA DE NOSOTROS
     color: #1a237e; 
 }
 
+<<<<<<< Updated upstream
 .contacto-hero {
     text-align: left;
     padding: 6rem 3rem;
@@ -448,4 +449,145 @@ CSS DE PAGINA ACERCA DE NOSOTROS
 
 .btn-leer-mas:hover {
     color: #E65100;
+=======
+/* ========================================================= */
+/* SECCIÓN DE EVENTOS, PROGRAMAS E INICIATIVAS - REDMASOL    */
+/* ========================================================= */
+
+/* Contenedor principal de Eventos */
+.eventos-container {
+    max-width: 1000px;
+    margin: 2.5rem auto;
+    padding: 0 1.5rem;
+}
+
+/* Encabezado Principal */
+.section-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.section-header h2 {
+    color: #1A237E;
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+    position: relative;
+    display: inline-block;
+}
+
+/* Línea decorativa amarilla debajo del título principal */
+.section-header h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #FBC02D;
+    margin: 0.5rem auto 0 auto;
+    border-radius: 2px;
+}
+
+.section-header p {
+    font-size: 1.05rem;
+    color: #444;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+/* Categorías (Subtítulos) */
+.eventos-categoria {
+    margin-bottom: 3rem;
+}
+
+.eventos-categoria h3 {
+    color: #1A237E;
+    font-size: 1.3rem;
+    border-left: 4px solid #E65100;
+    padding-left: 10px;
+    margin-bottom: 1.5rem;
+}
+
+/* Grilla Responsiva de Tarjetas */
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Tarjeta Individual de Evento */
+.card-evento {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    border-top: 4px solid #E65100;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-evento:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
+}
+
+/* Imagen y Etiquetas Flotantes */
+.card-image {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    background-color: #f0f3ff;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Badges / Etiquetas flotantes sobre la imagen */
+.badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: linear-gradient(45deg, #E65100, #ff7043);
+    color: #ffffff;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Variante azul para proyectos o estados activos */
+.badge-estado {
+    background: linear-gradient(45deg, #1A237E, #283593);
+}
+
+/* Contenido Interno de la Tarjeta */
+.card-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.card-content h4 {
+    color: #1A237E;
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-content .zona {
+    font-size: 0.85rem;
+    color: #E65100;
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+}
+
+.card-content p {
+    font-size: 0.95rem;
+    color: #4a5568;
+    line-height: 1.5;
+>>>>>>> Stashed changes
 }
