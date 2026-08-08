@@ -239,7 +239,6 @@ body {
     padding: 0.8rem;
 }
 
-/* Ajustes para las tarjetas de imágenes */
 .card-img {
     width: 100%;
     height: 200px;
@@ -267,31 +266,38 @@ body {
 }
 
 .contacto-hero {
-    text-align: left;
-    padding: 6rem 3rem;
+    text-align: center; 
+    padding: 5rem 2rem;
     background-size: cover;
-    background-position: center;
+    background-position: center center; 
     color: #ffffff;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     border-bottom: 5px solid #FBC02D;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .contacto-hero h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     text-transform: uppercase;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    border-left: 6px solid #FBC02D;
-    padding-left: 1rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    border-left: none; 
+    border-bottom: 4px solid #FBC02D;
+    padding-left: 0;
+    padding-bottom: 0.5rem;
     margin-bottom: 0.5rem;
 }
 
 .contacto-hero .slogan {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: #ffffff;
-    padding-left: 1.5rem;
+    padding-left: 0;
+    font-style: italic;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
-/* Contenedor Flex para Formulario e Información */
 .contacto-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -300,7 +306,6 @@ body {
     max-width: 1000px;
 }
 
-/* Columna del Formulario */
 .contacto-form-container {
     flex: 1;
     min-width: 300px;
