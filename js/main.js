@@ -1,46 +1,42 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    
-    const formContacto = document.querySelector('.form-contacto');
+    const formulario = document.querySelector('.volunteer-form');
+    const inputTelefono = document.getElementById('telefono');
 
    
-    if (formContacto) {
+    inputTelefono.addEventListener('input', function() {
+       
+        this.value = this.value.replace(/[^0-9+\-\s]/g, '');
+    });
+
+    formulario.addEventListener('submit', function(evento) {
         
-        
-        formContacto.addEventListener('submit', (evento) => {
-            
-           
-            evento.preventDefault(); 
+        evento.preventDefault();
 
-            try {
-                
-                const nombre = document.querySelector('input[name="nombre"]').value.trim();
-                const telefono = document.querySelector('input[name="telefono"]').value.trim();
-                const email = document.querySelector('input[name="email"]').value.trim();
-                const mensaje = document.querySelector('textarea[name="mensaje"]').value.trim();
+        const nombre = document.getElementById('nombre').value.trim();
+        const telefono = inputTelefono.value.trim();
+        const area = document.getElementById('area').value;
+        const mensaje = document.getElementById('mensaje').value.trim();
 
-               
-                if (nombre === '' || telefono === '' || email === '' || mensaje === '') {
-                  
-                    throw new Error('Todos los campos son obligatorios. Por favor, llénelos todos.');
-                }
+        const regexNombre = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/;
+        if (!regexNombre.test(nombre)) {
+            alert("Error: Por favor, ingresa un nombre válido (solo letras y espacios).");
+            return; 
+        }
 
-                
-                const formatoEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if (!formatoEmail.test(email)) {
-                    throw new Error('El formato del correo no es válido. Revíselo e intente de nuevo.');
-                }
+        if (telefono === "") {
+            alert("Error: El número de teléfono no puede estar vacío.");
+            return; 
+        }
 
-             
-                alert(`¡Éxito, ${nombre}! Tus datos han sido validados correctamente.`);
-                
-                
-                formContacto.reset();
+        console.log("--- Nueva Solicitud de Voluntariado ---");
+        console.log("Nombre:", nombre);
+        console.log("Teléfono:", telefono);
+        console.log("Área de interés:", area);
+        console.log("Mensaje:", mensaje);
 
-            } catch (error) {
-                
-                alert(`Atención: ${error.message}`);
-            }
-        });
-    }
+        alert(`¡Gracias por querer unirte a RedMaSolHN, ${nombre}!\n\nHemos recibido tu solicitud para el área de "${area}". Nos pondremos en contacto contigo pronto al número ${telefono}.`);
+
+        formulario.reset();
+    });
 });
