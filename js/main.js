@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     
 
-    // Nombre: Solo permite letras, espacios y acentos
+    
     inputNombre.addEventListener('input', function() {
         this.value = this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ\s]/g, '');
     });
