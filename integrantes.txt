@@ -1,0 +1,27 @@
+INTEGRANTES DEL PROYECTO
+========================
+
+Integrante 1
+Nombre: David Eduardo Ortiz Sanchez
+Número de cuenta: 0801200121486
+Usuario de GitHub: MaraDEOS
+
+Integrante 2
+Nombre: Cesar Alejandro Ortiz Vega
+Número de cuenta: 0801200517626
+Usuario de GitHub: Cesar-Ortiz09
+
+Integrante 3
+Nombre: Fernando Yareth Barahona Lagos
+Número de cuenta: 0610200500080
+Usuario de GitHub: ferybarahonal13-lgtm
+
+Integrante 4
+Nombre: Julio Gabriel Torres Argeñal
+Número de cuenta: 0801200610026
+Usuario de GitHub: Julio Torres
+
+Integrante 5
+Nombre: Andriy Jose Barahona Gonzalez
+Número de cuenta: 0801200510366
+Usuario de GitHub: andriybarahona
