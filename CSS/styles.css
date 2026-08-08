@@ -259,7 +259,6 @@ CSS DE PAGINA ACERCA DE NOSOTROS
     color: #1a237e; 
 }
 
-<<<<<<< Updated upstream
 .contacto-hero {
     text-align: left;
     padding: 6rem 3rem;
@@ -449,19 +448,15 @@ CSS DE PAGINA ACERCA DE NOSOTROS
 
 .btn-leer-mas:hover {
     color: #E65100;
-=======
-/* ========================================================= */
-/* SECCIÓN DE EVENTOS, PROGRAMAS E INICIATIVAS - REDMASOL    */
-/* ========================================================= */
+}
 
-/* Contenedor principal de Eventos */
+
 .eventos-container {
     max-width: 1000px;
     margin: 2.5rem auto;
     padding: 0 1.5rem;
 }
 
-/* Encabezado Principal */
 .section-header {
     text-align: center;
     margin-bottom: 2.5rem;
@@ -475,7 +470,6 @@ CSS DE PAGINA ACERCA DE NOSOTROS
     display: inline-block;
 }
 
-/* Línea decorativa amarilla debajo del título principal */
 .section-header h2::after {
     content: '';
     display: block;
@@ -506,14 +500,12 @@ CSS DE PAGINA ACERCA DE NOSOTROS
     margin-bottom: 1.5rem;
 }
 
-/* Grilla Responsiva de Tarjetas */
 .grid-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
 }
 
-/* Tarjeta Individual de Evento */
 .card-evento {
     background: #ffffff;
     border-radius: 12px;
@@ -530,7 +522,6 @@ CSS DE PAGINA ACERCA DE NOSOTROS
     box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
 }
 
-/* Imagen y Etiquetas Flotantes */
 .card-image {
     position: relative;
     width: 100%;
@@ -544,7 +535,6 @@ CSS DE PAGINA ACERCA DE NOSOTROS
     object-fit: cover;
 }
 
-/* Badges / Etiquetas flotantes sobre la imagen */
 .badge {
     position: absolute;
     top: 12px;
@@ -558,12 +548,10 @@ CSS DE PAGINA ACERCA DE NOSOTROS
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Variante azul para proyectos o estados activos */
 .badge-estado {
     background: linear-gradient(45deg, #1A237E, #283593);
 }
 
-/* Contenido Interno de la Tarjeta */
 .card-content {
     padding: 1.5rem;
     display: flex;
@@ -589,5 +577,4 @@ CSS DE PAGINA ACERCA DE NOSOTROS
     font-size: 0.95rem;
     color: #4a5568;
     line-height: 1.5;
->>>>>>> Stashed changes
 }
